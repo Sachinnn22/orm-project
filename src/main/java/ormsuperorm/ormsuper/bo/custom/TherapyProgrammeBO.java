@@ -1,5 +1,6 @@
 package ormsuperorm.ormsuper.bo.custom;
 
+import ormsuperorm.ormsuper.bo.SuperBO;
 import ormsuperorm.ormsuper.dto.TherapistDTO;
 import ormsuperorm.ormsuper.dto.TherapyProgramDTO;
 
@@ -7,7 +8,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface TherapyProgrammeBO {
+public interface TherapyProgrammeBO extends SuperBO {
     public boolean save(TherapyProgramDTO therapyProgramDTO) throws IOException, SQLException;
     public String getNextId() throws SQLException, IOException;
     public List<TherapyProgramDTO> getAll() throws SQLException, IOException;

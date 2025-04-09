@@ -146,4 +146,7 @@ public class TherapyProgrammeController implements Initializable {
         disTxt.clear();
         therIdCombo.setValue(null);
     }
+
+    public void therIdComboAcc(ActionEvent actionEvent) {
+    }
 }

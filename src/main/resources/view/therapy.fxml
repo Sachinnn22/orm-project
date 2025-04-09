@@ -44,7 +44,7 @@
       </TableView>
       <Label layoutX="330.0" layoutY="198.0" style="-fx-font-size: 13px; -fx-font-weight: bold;" text="Programme Name" />
       <Label layoutX="27.0" layoutY="198.0" style="-fx-font-size: 13px; -fx-font-weight: bold;" text="ProgrammeId" />
-      <ComboBox layoutX="125.0" layoutY="195.0" onAction="#proIdComboAcc" prefWidth="150.0" />
+      <ComboBox fx:id="proCombo" layoutX="125.0" layoutY="195.0" onAction="#proIdComboAcc" prefWidth="150.0" />
       <Label fx:id="proNameLbl" layoutX="479.0" layoutY="198.0" prefHeight="19.0" prefWidth="60.0" style="-fx-font-size: 13px; -fx-font-weight: bold;" />
    </children>
 </AnchorPane>

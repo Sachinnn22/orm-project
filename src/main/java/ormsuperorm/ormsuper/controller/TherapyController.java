@@ -9,7 +9,10 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import ormsuperorm.ormsuper.bo.BOFactory;
 import ormsuperorm.ormsuper.bo.custom.TherapistBO;
+import ormsuperorm.ormsuper.bo.custom.TherapyProgrammeBO;
 import ormsuperorm.ormsuper.dto.TherapistDTO;
+import ormsuperorm.ormsuper.dto.TherapyProgramDTO;
+import ormsuperorm.ormsuper.entity.TherapyProgram;
 import ormsuperorm.ormsuper.tm.TherapyTM;
 
 import java.io.IOException;
@@ -22,6 +25,7 @@ import java.util.ResourceBundle;
 public class TherapyController implements Initializable {
 
     TherapistBO therapistBO = (TherapistBO) BOFactory.getBoFactory().getBo(BOFactory.BOTypes.THERAPY);
+    TherapyProgrammeBO therapyProgrammeBO = (TherapyProgrammeBO) BOFactory.getBoFactory().getBo(BOFactory.BOTypes.THERAPYPROGRAMME);
 
     @FXML
     private TableColumn<TherapyTM, String> emailCol;
@@ -40,6 +44,9 @@ public class TherapyController implements Initializable {
 
     @FXML
     private TextField emailTtx;
+
+    @FXML
+    private ComboBox<?> proCombo;
 
     @FXML
     private TextField protxt;
@@ -182,15 +189,15 @@ public class TherapyController implements Initializable {
     }
 
     @FXML
-    void proIdComboAcc(ActionEvent event) {
+    void proIdComboAcc(ActionEvent event) throws SQLException, IOException {
+        String selectedID = (String) proCombo.getValue();
+        TherapyProgramDTO therapyProgramDTO = therapyProgrammeBO.findById(selectedID);
 
+        if (therapyProgramDTO != null) {
+            proNameLbl.setText(therapyProgramDTO.getProgrammeName());
+        }
     }
 
 }
 
 
-///reset button ekai
-
-///therapistTMS
-
-/// on click ekai hdnna one

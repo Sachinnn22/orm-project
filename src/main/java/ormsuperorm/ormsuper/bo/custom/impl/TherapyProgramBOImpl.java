@@ -23,7 +23,7 @@ public class TherapyProgramBOImpl implements TherapyProgrammeBO {
                 dto.getFee(),
                 dto.getDuration(),
                 dto.getDescription(),
-                null // therapists will be set separately
+                null
         );
         return programDAO.save(program);
     }

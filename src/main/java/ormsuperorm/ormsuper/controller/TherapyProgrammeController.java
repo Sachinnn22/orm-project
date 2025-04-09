@@ -138,13 +138,7 @@ public class TherapyProgrammeController implements Initializable {
     }
 
     void refreshPage() throws SQLException, ClassNotFoundException, IOException {
-        loadTableData();
-        progrmeIdTxt.clear();
-        proNmeTxt.clear();
-        proFeeTxt.clear();
-        durationTxt.clear();
-        disTxt.clear();
-        therIdCombo.setValue(null);
+
     }
 
     public void therIdComboAcc(ActionEvent actionEvent) {

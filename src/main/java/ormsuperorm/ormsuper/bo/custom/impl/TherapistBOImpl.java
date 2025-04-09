@@ -60,7 +60,7 @@ public class TherapistBOImpl implements TherapistBO {
                 therapist.getTherapistName(),
                 therapist.getProfession(),
                 therapist.getEmail(),
-                therapist.getProgram().getProgrammeId() // programId included
+                therapist.getProgram().getProgrammeId()
         );
     }
 

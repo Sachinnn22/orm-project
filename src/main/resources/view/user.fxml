@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="500.0" prefWidth="550.0" style="-fx-background-color: #e3f2fd; -fx-padding: 20px;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox alignment="CENTER" layoutX="75.0" layoutY="20.0" prefWidth="400.0" spacing="15">
+            <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1565c0;" text="User Management" />
+
+            <TextField fx:id="userIdTxt" promptText="User ID" style="-fx-padding: 8px; -fx-border-color: #64b5f6; -fx-border-radius: 5px;" />
+            <TextField fx:id="userNameTxt" promptText="User Name" style="-fx-padding: 8px; -fx-border-color: #64b5f6; -fx-border-radius: 5px;" />
+            <TextField fx:id="userPswrdTxt" promptText="Password" style="-fx-padding: 8px; -fx-border-color: #64b5f6; -fx-border-radius: 5px;" />
+        </VBox>
+
+        <TableView fx:id="userTable" layoutX="50.0" layoutY="292.0" prefHeight="180.0" prefWidth="450.0" style="-fx-background-color: white; -fx-border-color: #64b5f6; -fx-border-radius: 5px;">
+            <columns>
+                <TableColumn fx:id="userIdCol" prefWidth="150.0" text="User ID" />
+                <TableColumn fx:id="userNameCol" prefWidth="150.0" text="User Name" />
+                <TableColumn fx:id="userPswrdCol" prefWidth="150.0" text="Password" />
+            </columns>
+        </TableView>
+
+         <HBox alignment="CENTER" layoutX="81.0" layoutY="232.0" prefHeight="33.0" prefWidth="351.0" spacing="10">
+             <Button fx:id="btnSave" onAction="#btnSaveAcc" style="-fx-background-color: #43a047; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8px; -fx-border-radius: 5px;" text="Save" />
+             <Button fx:id="btnUpdate" onAction="#btnUpdateAcc" style="-fx-background-color: #ffb300; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8px; -fx-border-radius: 5px;" text="Update" />
+             <Button fx:id="btnDelete" onAction="#btnDeleteAcc" style="-fx-background-color: #e53935; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8px; -fx-border-radius: 5px;" text="Delete" />
+         </HBox>
+    </children>
+</AnchorPane>

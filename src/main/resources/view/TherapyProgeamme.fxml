@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="549.0" prefWidth="650.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ormsuperorm.ormsuper.controller.TherapyProgrammeController">
+   <children>
+      <Label alignment="CENTER" layoutX="160.0" layoutY="20.0" text="Therapist Programme Management" textFill="#c93e3e">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="22.0" />
+         </font>
+      </Label>
+      <Line endX="590.0" layoutX="30.0" layoutY="60.0" startX="30.0" style="-fx-stroke: #34495e; -fx-stroke-width: 2;" />
+      <Label layoutX="30.0" layoutY="90.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Programme ID:" />
+      <TextField fx:id="progrmeIdTxt" layoutX="150.0" layoutY="85.0" prefWidth="180.0" promptText="Enter Programme ID" style="-fx-border-color: #2980b9; -fx-border-width: 0 0 2px 0; -fx-background-color: #fff; -fx-padding: 5 10;" />
+      <Label layoutX="340.0" layoutY="90.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Programme Name:" />
+      <TextField fx:id="proNmeTxt" layoutX="470.0" layoutY="85.0" prefWidth="150.0" promptText="Enter Programme Name" style="-fx-border-color: #2980b9; -fx-background-color: #fff; -fx-border-width: 0 0 2px 0; -fx-padding: 5 10;" />
+      <Label layoutX="30.0" layoutY="140.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Programme Fee:" />
+      <TextField fx:id="proFeeTxt" layoutX="150.0" layoutY="135.0" prefWidth="180.0" promptText="Enter Programme Fee" style="-fx-border-color: #2980b9; -fx-border-width: 0 0 2px 0; -fx-background-color: #fff; -fx-padding: 5 10;" />
+      <Label layoutX="350.0" layoutY="140.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Duration:" />
+      <TextField fx:id="durationTxt" layoutX="470.0" layoutY="135.0" prefWidth="150.0" promptText="Enter Duration" style="-fx-border-color: #2980b9; -fx-border-width: 0 0 2px 0; -fx-background-color: #fff; -fx-padding: 5 10;" />
+      <Label layoutX="30.0" layoutY="190.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Description:" />
+      <TextField fx:id="disTxt" layoutX="150.0" layoutY="185.0" prefWidth="470.0" promptText="Enter Description" style="-fx-border-color: #2980b9; -fx-border-width: 0 0 2px 0; -fx-background-color: #fff; -fx-padding: 5 10;" />
+      <Label layoutX="30.0" layoutY="240.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Therapy ID:" />
+      <ButtonBar layoutX="170.0" layoutY="288.0">
+         <buttons>
+            <Button fx:id="tpbtnSave" onAction="#proBtnSVE" prefWidth="100.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;" text="Save" />
+            <Button fx:id="tpbtnDelete" onAction="#proBtnDelete" prefWidth="100.0" style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-weight: bold;" text="Delete" />
+            <Button fx:id="tpbtnUpdate" onAction="#proBtnUpdte" prefWidth="100.0" style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-weight: bold;" text="Update" />
+         </buttons>
+      </ButtonBar>
+      <TableView fx:id="tblTheapiest" layoutX="30.0" layoutY="330.0" prefHeight="194.0" prefWidth="590.0" style="-fx-border-color: #2980b9; -fx-border-width: 1px;">
+         <columns>
+            <TableColumn fx:id="proIdCol" prefWidth="100.0" text="Programme ID" />
+            <TableColumn fx:id="proNameCol" prefWidth="130.0" text="Programme Name" />
+            <TableColumn fx:id="proFeeCol" prefWidth="110.0" text="Programme Fee" />
+            <TableColumn fx:id="durationCol" prefWidth="100.0" text="Duration" />
+            <TableColumn fx:id="discriptionCol" prefWidth="150.0" text="Description" />
+            <TableColumn fx:id="therIdCol" prefWidth="100.0" text="Therapy ID" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="therIdCombo" layoutX="150.0" layoutY="232.0" onAction="#therIdComboAcc" prefWidth="150.0" style="-fx-border-color: #2980b9; -fx-border-width: 0 0 2px 0; -fx-background-color: #fff; -fx-padding: 5 10;" />
+   </children>
+</AnchorPane>

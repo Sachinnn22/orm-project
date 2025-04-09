@@ -24,4 +24,7 @@ public class User implements SuperEntity {
     @Column
     private String userPassword;
 
+    @Column
+    private String role;
+
 }

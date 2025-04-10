@@ -113,6 +113,11 @@ public class TherapyProgrammeController implements Initializable {
         }
     }
 
+    private void LoadNextID() throws SQLException, IOException {
+        String nextID = therapyProgrammeBO.getNextId();
+        progrmeIdTxt.setText(nextID);
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         proIdCol.setCellValueFactory(new PropertyValueFactory<>("therapyProgrammeId"));
@@ -138,9 +143,23 @@ public class TherapyProgrammeController implements Initializable {
     }
 
     void refreshPage() throws SQLException, ClassNotFoundException, IOException {
+        LoadNextID();
+        loadTableData();
+
+        tpbtnSave.setDisable(true);
+        tpbtnDelete.setDisable(false);
+        tpbtnUpdate.setDisable(true);
+
+        progrmeIdTxt.setText("");
+        proNmeTxt.setText("");
+        proFeeTxt.setText("");
+        proFeeTxt.setText("");
+        proFeeTxt.setText("");
+        disTxt.setText("");
 
     }
 
     public void therIdComboAcc(ActionEvent actionEvent) {
+
     }
 }

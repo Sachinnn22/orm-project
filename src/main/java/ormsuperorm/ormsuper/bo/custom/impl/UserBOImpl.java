@@ -34,6 +34,13 @@ public class UserBOImpl implements UserBO {
         return userDAO.getNextId();
     }
 
+
+    @Override
+    public String getUser(String name) throws Exception {
+        String user = userDAO.getUser(name);
+        return user;
+    }
+
     @Override
     public List<UserDTO> getAll() throws SQLException, IOException {
         List<User> userList = userDAO.getAll();

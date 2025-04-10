@@ -7,6 +7,7 @@ module ormsuperorm.ormsuper {
     requires org.hibernate.orm.core;
     requires jakarta.persistence;
     requires java.naming;
+    requires jbcrypt;
 
     opens ormsuperorm.ormsuper.entity to org.hibernate.orm.core;
     opens ormsuperorm.ormsuper.configue to jakarta.persistence;

@@ -3,6 +3,7 @@ package ormsuperorm.ormsuper.configue;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import ormsuperorm.ormsuper.entity.Patient;
 import ormsuperorm.ormsuper.entity.Therapist;
 import ormsuperorm.ormsuper.entity.TherapyProgram;
 import ormsuperorm.ormsuper.entity.User;
@@ -16,7 +17,7 @@ public class FactoryConfiguration {
     private FactoryConfiguration() {
         Configuration configuration = new Configuration();
         configuration.configure();
-        configuration.addAnnotatedClass(Therapist.class).addAnnotatedClass(TherapyProgram.class).addAnnotatedClass(User.class);
+        configuration.addAnnotatedClass(Therapist.class).addAnnotatedClass(TherapyProgram.class).addAnnotatedClass(User.class).addAnnotatedClass(Patient.class);
         sessionFactory = configuration.buildSessionFactory();
     }
 

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="462.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ormsuperorm.ormsuper.controller.MainLayoutController">
+   <children>
+      <Button fx:id="btnTheapy" layoutX="88.0" layoutY="120.0" mnemonicParsing="false" onAction="#btnThearpyOnACC" prefHeight="115.0" prefWidth="121.0" />
+      <ImageView fitHeight="74.0" fitWidth="81.0" layoutX="112.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/physical-therapy.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="40.0" layoutX="34.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="172.0" layoutY="26.0" prefHeight="17.0" prefWidth="257.0" text="Welocme Mental Thearpy center" />
+      <Button layoutX="480.0" layoutY="31.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="63.0" />
+      <Button fx:id="btnLogOut" layoutX="54.0" layoutY="41.0" mnemonicParsing="false" onAction="#logOutOnAcc" prefHeight="52.0" prefWidth="63.0" />
+      <ImageView fitHeight="31.0" fitWidth="50.0" layoutX="496.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-key-40.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="50.0" layoutX="70.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-logout-40.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="135.0" layoutY="208.0" text="Label" />
+      <Button fx:id="btnPatient" layoutX="390.0" layoutY="120.0" mnemonicParsing="false" onAction="#btnPatienteOnAcc" prefHeight="115.0" prefWidth="121.0" />
+      <ImageView fitHeight="74.0" fitWidth="81.0" layoutX="414.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/physical-therapy.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnTprogramme" layoutX="257.0" layoutY="114.0" mnemonicParsing="false" onAction="#btnTprogrammeOnAcc" prefHeight="115.0" prefWidth="121.0" />
+      <ImageView fitHeight="74.0" fitWidth="81.0" layoutX="290.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/physical-therapy.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="437.0" layoutY="208.0" text="Label" />
+      <Button fx:id="btnPayment" layoutX="112.0" layoutY="260.0" mnemonicParsing="false" onAction="#btnPaymentOnAcc" prefHeight="115.0" prefWidth="121.0" />
+      <ImageView fitHeight="74.0" fitWidth="81.0" layoutX="136.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/physical-therapy.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="159.0" layoutY="348.0" text="Label" />
+      <Button fx:id="btnUser" layoutX="242.0" layoutY="260.0" mnemonicParsing="false" onAction="#btnUserOnAcc" prefHeight="115.0" prefWidth="121.0" />
+      <ImageView fitHeight="74.0" fitWidth="81.0" layoutX="266.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/physical-therapy.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="289.0" layoutY="348.0" text="Label" />
+      <Label layoutX="304.0" layoutY="208.0" text="Label" />
+   </children>
+</AnchorPane>

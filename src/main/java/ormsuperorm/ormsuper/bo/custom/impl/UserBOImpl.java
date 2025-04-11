@@ -2,6 +2,8 @@ package ormsuperorm.ormsuper.bo.custom.impl;
 
 import ormsuperorm.ormsuper.bo.BOFactory;
 import ormsuperorm.ormsuper.bo.custom.UserBO;
+import ormsuperorm.ormsuper.dao.DAOFactory;
+import ormsuperorm.ormsuper.dao.custom.PatientDAO;
 import ormsuperorm.ormsuper.dao.custom.UserDAO;
 import ormsuperorm.ormsuper.dto.TherapistDTO;
 import ormsuperorm.ormsuper.dto.UserDTO;
@@ -16,7 +18,7 @@ import java.util.List;
 
 public class UserBOImpl implements UserBO {
 
-    UserDAO userDAO = (UserDAO) BOFactory.getBoFactory().getBo(BOFactory.BOTypes.USER);
+    UserDAO userDAO = (UserDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.USER);
 
     @Override
     public boolean save(UserDTO userDTO) throws IOException, SQLException {
@@ -31,7 +33,7 @@ public class UserBOImpl implements UserBO {
 
     @Override
     public String getNextId() throws SQLException, IOException {
-        return userDAO.getNextId();
+
     }
 
 

@@ -1,9 +1,6 @@
 package ormsuperorm.ormsuper.dao;
 
-import ormsuperorm.ormsuper.dao.custom.impl.PatientDAOImpl;
-import ormsuperorm.ormsuper.dao.custom.impl.TherapistDAOImpl;
-import ormsuperorm.ormsuper.dao.custom.impl.TherapyProgramDAOImpl;
-import ormsuperorm.ormsuper.dao.custom.impl.UserDAOImpl;
+import ormsuperorm.ormsuper.dao.custom.impl.*;
 
 public class DAOFactory {
     private static DAOFactory daoFactory;
@@ -20,7 +17,7 @@ public class DAOFactory {
     }
 
     public  enum  DAOTypes{
-        THERAPY,THERAPYPROGRAMME,USER,PATIENT
+        THERAPY,THERAPYPROGRAMME,USER,PATIENT,PAYMENT
     }
 
     public SuperDAO getDAO(DAOFactory.DAOTypes types){
@@ -33,6 +30,8 @@ public class DAOFactory {
                 return new UserDAOImpl();
             case PATIENT:
                 return new PatientDAOImpl();
+            case PAYMENT:
+                return new PaymentDAOImpl();
             default:
                 return null;
         }

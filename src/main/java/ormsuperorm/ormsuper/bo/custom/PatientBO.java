@@ -16,7 +16,7 @@ public interface PatientBO extends SuperBO {
     public List<PatientDTO> getAll() throws SQLException, IOException;
     public boolean update(PatientDTO patientDTO) throws IOException, SQLException;
     public boolean delete(String patientId) throws SQLException, IOException;
-    public TherapistDTO findById(String patientId) throws SQLException, IOException;
+    public PatientDTO findById(String patientId) throws SQLException, IOException;
 
     ArrayList<String> getAllIds() throws SQLException, ClassNotFoundException, IOException;
 }

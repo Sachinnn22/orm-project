@@ -54,6 +54,6 @@
                 <TableColumn fx:id="balanceCol" prefWidth="79.0" text="Balance" />
             </columns>
         </TableView>
-      <ComboBox fx:id="comboPatId" layoutX="140.0" layoutY="137.0" onAction="#patIdComboOnAcc" prefWidth="150.0" />
+      <ComboBox fx:id="comboPatId" layoutX="140.0" layoutY="137.0" prefWidth="150.0" />
     </children>
 </AnchorPane>

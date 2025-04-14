@@ -17,7 +17,7 @@ public class DAOFactory {
     }
 
     public  enum  DAOTypes{
-        THERAPY,THERAPYPROGRAMME,USER,PATIENT,PAYMENT
+        THERAPY,THERAPYPROGRAMME,USER,PATIENT,PAYMENT,THERAPYSESSION
     }
 
     public SuperDAO getDAO(DAOFactory.DAOTypes types){
@@ -32,6 +32,8 @@ public class DAOFactory {
                 return new PatientDAOImpl();
             case PAYMENT:
                 return new PaymentDAOImpl();
+            case THERAPYSESSION:
+                return new TherapySessionDAOImpl();
             default:
                 return null;
         }
